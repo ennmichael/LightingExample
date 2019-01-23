@@ -339,3 +339,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database 
 healthchecksdb
+
+!LightingExample/glew-2.1.0/lib/*
