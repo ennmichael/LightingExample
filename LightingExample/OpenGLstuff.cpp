@@ -88,9 +88,14 @@ private:
 
 int main(int, char**)
 {
-	std::cout << PolarAngleIsLess(Vector{ 1.0f, 1.0f }, Vector{ 1.0f, -1.0f }, Vector{ 0.0f, 0.0f }) << '\n';
-	std::cout << PolarAngleIsLess(Vector{ 1.0f, -1.0f }, Vector{ 1.0f, 1.0f }, Vector{ 0.0f, 0.0f }) << '\n';
-	LightingExample lightingExample;
-	lightingExample.MainLoop();
+	try {
+		std::cout << PolarAngleIsLess(Vector{ 1.0f, 1.0f }, Vector{ 1.0f, -1.0f }, Vector{ 0.0f, 0.0f }) << '\n';
+		std::cout << PolarAngleIsLess(Vector{ 1.0f, -1.0f }, Vector{ 1.0f, 1.0f }, Vector{ 0.0f, 0.0f }) << '\n';
+		LightingExample lightingExample;
+		lightingExample.MainLoop();
+	}
+	catch (std::runtime_error& e) {
+		std::cout << e.what() << '\n';
+	}
 	return 0;
 }

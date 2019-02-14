@@ -13,7 +13,7 @@ Buffers Buffers::ForTargets(std::vector<GLenum> const& targets)
 Buffers::Buffers(GLsizei count)
 	: rawBuffers(count)
 {
-	glCreateBuffers(rawBuffers.size(), rawBuffers.data());
+	glGenBuffers(rawBuffers.size(), rawBuffers.data());
 }
 
 Buffers::~Buffers()
